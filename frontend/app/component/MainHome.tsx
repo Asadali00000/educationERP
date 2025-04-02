@@ -10,7 +10,7 @@ function MainHome() {
       <div className={styles.contentContainer}>
         <h1>Empower Education Through Technology</h1>
         <p>
-          Transform your school's management with our comprehensive platform designed for students, teachers, and administrators.
+          Transform your school s management with our comprehensive platform designed for students, teachers, and administrators.
         </p>
         <div className={styles.authContainer}>
           <button type="button" className={styles.signupButton}>Get Started</button>
