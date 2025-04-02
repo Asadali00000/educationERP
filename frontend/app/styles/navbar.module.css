@@ -1,0 +1,59 @@
+.container{
+	display: flex;
+	margin-inline: 100px;
+	margin-block: 10px;
+	align-items: center;
+	height: 60px;
+   }
+
+   .firstContainer{
+	  margin-inline-end: 250px;
+	  font-size: 22px;
+	  font-weight: bold;
+	  color: #4285F4;
+   }
+
+   .firstContainer span {
+	  color: #F4B400;
+   }
+
+   .secondContainer{
+	  display: flex;
+	  width: 100%;
+	  justify-content: space-between;
+	  font-size: 16px;
+   }
+
+   .productsContainer{
+	  justify-content: space-evenly;
+	  display: flex;
+	  align-items: center;
+	  color: #5f6368;
+	  font-weight: 500;
+   }
+
+   .dropDownLogo{
+	  margin: 5px 0px 0px 5px;
+   }
+
+   .authContainer{
+	  display: flex;
+	  justify-content: space-evenly;
+	  align-items: center;
+	  gap: 20px;
+   }
+
+   .signupButton {
+	  color: #5f6368;
+	  font-weight: 500;
+	  cursor: pointer;
+   }
+
+   .loginButton{
+	  background-color: #1a73e8;
+	  color: white;
+	  padding: 8px 24px;
+	  border-radius: 25px;
+	  font-weight: 500;
+	  cursor: pointer;
+   }
