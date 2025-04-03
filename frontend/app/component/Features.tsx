@@ -25,6 +25,7 @@ function Features() {
 		return () => {
 			featureBoxes.forEach(box => observer.unobserve(box));
 		};
+
 	}, []);
 
 	return (

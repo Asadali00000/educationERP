@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 function MainHome() {
   return (
-    <div className={`${styles.container} ${styles.heroSection}`}>
+    <div className={`${styles.container}  `}>
 
       <div className={styles.contentContainer}>
         <h1>Empower Education Through Technology</h1>

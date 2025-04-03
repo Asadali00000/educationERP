@@ -1,0 +1,51 @@
+
+.container {
+	display: flex ;
+	flex-direction: column;
+	padding-inline: 100px;
+	margin-block: 10px;
+	justify-content: center;
+	align-items: center;
+	height: 300px;
+	background: linear-gradient(135deg, #f5f7fa 0%, #e4f1fe 100%);
+
+}
+.authContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	margin-top: 40px;
+  }
+
+  .signupButton {
+	background-color: #1a73e8;
+	color: white;
+	padding: 12px 30px;
+	border-radius: 30px;
+	font-weight: 600;
+	font-size: 16px;
+	cursor: pointer;
+	border: none;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+.contentContainer h1 {
+	font-size: 30px;
+	line-height: 1.2;
+	color: #202124;
+	font-weight: 700;
+	margin-bottom: 5px;
+	font-family: 'Google Sans', Arial, sans-serif;
+	text-align: center;
+}
+
+.contentContainer p {
+	font-size: 18px;
+	line-height: 1.5;
+	color: #5f6368;
+	margin-bottom: 20px;
+	max-width: 560px;
+	font-family: 'Google Sans', Arial, sans-serif;
+	text-align: center;
+}
