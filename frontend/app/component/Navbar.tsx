@@ -11,7 +11,6 @@ function Navbar() {
 				ERP
 				</span>
 			</div>
-			<div className={`${styles.secondContainer}`}>
 				<div className={`${styles.productsContainer}`}>
 
 					<span>
@@ -36,7 +35,6 @@ function Navbar() {
 
 					</div>
 				</div>
-			</div>
 
 		</div>
 

@@ -1,5 +1,6 @@
 .container{
 	display: flex;
+	justify-content: space-between;
 	padding-inline: 100px;
 	margin-block: 10px;
 	align-items: center;
@@ -7,7 +8,8 @@
    }
 
    .firstContainer{
-	  margin-inline-end: 250px;
+	  /* padding-inline-end:   clamp(1rem, 20vw, 100rem); */
+
 	  font-size: 22px;
 	  font-weight: bold;
 	  color: #4285F4;
@@ -56,4 +58,10 @@
 	  border-radius: 25px;
 	  font-weight: 500;
 	  cursor: pointer;
+   }
+
+   @media (max-width:40em){
+ .container{
+	background: black;
+ }
    }
