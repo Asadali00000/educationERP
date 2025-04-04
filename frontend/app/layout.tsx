@@ -28,7 +28,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}  style={{
           maxWidth: "1200px", // Fixed width
-					minWidth:"578px",
+
           margin: "0 auto", // Centered horizontally
           padding: "0",
           boxSizing: "border-box",

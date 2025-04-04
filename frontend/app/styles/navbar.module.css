@@ -1,67 +1,300 @@
-.container{
+.container {
 	display: flex;
 	justify-content: space-between;
-	padding-inline: 100px;
-	margin-block: 10px;
+	padding-inline: clamp(5px, 5vw, 100px);
+	margin-block: clamp(20px, 2vw, 50px);
 	align-items: center;
 	height: 60px;
-   }
+	position: relative;
+}
 
-   .firstContainer{
-	  /* padding-inline-end:   clamp(1rem, 20vw, 100rem); */
+.firstContainer {
 
-	  font-size: 22px;
-	  font-weight: bold;
-	  color: #4285F4;
-   }
+	font-size: 22px;
+	font-weight: bold;
+	color:#4285F4;
+	margin-right: 10%;
+}
 
-   .firstContainer span {
-	  color: #F4B400;
-   }
+.firstContainer span {
+	color:
+		#F4B400;
+}
 
-   .secondContainer{
-	  display: flex;
-	  width: 100%;
-	  justify-content: space-between;
-	  font-size: 16px;
-   }
+.secondContainer {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	font-size: 16px;
+}
 
-   .productsContainer{
-	  justify-content: space-evenly;
-	  display: flex;
-	  align-items: center;
-	  color: #5f6368;
-	  font-weight: 500;
-   }
+.productsContainer {
+	justify-content: space-evenly;
+	display: flex;
+	align-items: center;
+	color:
+		#5f6368;
+	font-weight: 500;
+	position: relative;
+	gap: 5px;
+	min-width: 130px;
+}
 
-   .dropDownLogo{
-	  margin: 5px 0px 0px 5px;
-   }
+.dropDownLogo {
+	margin: 5px 0px 0px 5px;
+	flex-shrink: 0;
 
-   .authContainer{
-	  display: flex;
-	  justify-content: space-evenly;
-	  align-items: center;
-	  gap: 20px;
-   }
 
-   .signupButton {
-	  color: #5f6368;
-	  font-weight: 500;
-	  cursor: pointer;
-   }
+}
 
-   .loginButton{
-	  background-color: #1a73e8;
-	  color: white;
-	  padding: 8px 24px;
-	  border-radius: 25px;
-	  font-weight: 500;
-	  cursor: pointer;
-   }
 
-   @media (max-width:40em){
- .container{
-	background: black;
+.authContainer {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	gap: 20px;
+
+}
+
+.navContainer {
+	display: flex;
+	gap: max(0rem, 30vw - 5rem);
+
+	width: auto;
+
+
+}
+
+
+.signupButton {
+	color:
+		#5f6368;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.loginButton {
+	background-color:
+		#1a73e8;
+	color: white;
+	padding: 8px 24px;
+	border-radius: 25px;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+
+
+/* Dropdown styling to match eSkooly */
+.dropDown {
+	position: absolute;
+	top: 100%;
+	width: 800px;
+	width: clamp(500px, 80vw, 800px);
+	background-color: white;
+	border-radius: 8px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	margin-top: 10px;
+	z-index: 100;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+}
+
+
+
+.dropdownSection {
+	flex: 1;
+	padding: 0 15px;
+	border-right: 1px solid #eee;
+}
+
+.dropdownSection:last-child {
+	border-right: none;
+}
+
+.sectionTitle {
+	font-size: 16px;
+	color: #5f6368;
+	margin-bottom: 15px;
+	font-weight: 500;
+}
+
+.dropDownItem {
+	display: flex;
+	align-items: center;
+	padding: 10px 0;
+	color: #5f6368;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+}
+
+.iconWrapper {
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.itemContent {
+	margin-left: 10px;
+	white-space:nowrap;
+
+}
+
+.itemContent div:first-child {
+	font-weight: 500;
+}
+
+.downloadLink {
+	font-size: 12px;
+	color: #1a73e8;
+	margin-top: 4px;
+}
+
+.dropDownItem:hover {
+	background-color: #f8f9fa;
+	border-radius: 4px;
+}
+
+.menuButton {
+	display: none;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	padding: 8px 12px;
+	cursor: pointer;
+	font-weight: bold;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+	font-size: 30px;
+	line-height: 24px;
+	height: 24px;
+	width: 24px;
+}
+
+.menuText {
+	margin-left: 5px;
+}
+@keyframes fadeInUp{
+	from{
+		opacity: 0;
+		transform: translateY(-50px);
+	}
+	to{
+		opacity: 1;
+		transform: translateY(0);
+	}
  }
-   }
+
+@media (max-width: 40em) {
+	.container {
+		background: black;
+		color: white;
+	}
+
+	.navContainer {
+		display: none;
+		gap: 0;
+	}
+
+	.navContainerMobile {
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		background: linear-gradient(135deg, #f5f7fa 0%, #e4f1fe 100%);
+		padding: 20px;
+		z-index: 99;
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	}
+
+	.navContainerMobile .productsContainer {
+		flex-direction: column;
+		color: black;
+		align-items: center;
+		width: 100%;
+	}
+
+	.navContainerMobile .authContainer {
+		flex-direction: column;
+
+		width: 100%;
+		padding-top: 10px;
+		gap: 10px;
+	}
+	.signupButton{
+		color: black;
+	}
+	 .dropDownLogo{
+		display: none;
+	}
+
+	.menuButton {
+		display: flex;
+		position: absolute;
+		top: 15px;
+		right: 20px;
+	}
+
+	.dropDown {
+		position: relative;
+		width: 100%;
+		margin-top: 5px; /* Reduced from 10px */
+		padding: 8px; /* Reduced from 10px */
+		opacity: 0;
+
+		animation: fadeInUp 0.8s ease forwards;;
+	}
+
+	.dropdownSection {
+		padding: 6px 0; /* Reduced from 10px */
+		margin-bottom: 6px; /* Reduced from 10px */
+	}
+
+
+	.sectionTitle {
+		font-size: clamp(4px,2.5vw,14px);
+		text-align: center;
+		margin-bottom: 8px;
+	}
+
+	.dropDownItem {
+		padding: 6px 0;
+	}
+
+	.iconWrapper {
+		width: 32px;
+		height: 32px;
+	}
+
+	.itemContent {
+		margin-left: 8px;
+	}
+
+	.itemContent div:first-child {
+
+		font-size: clamp(4px,2.5vw,14px);
+
+	}
+
+	.itemContent div:last-child {
+
+		font-size: clamp(4px,2.5vw,12px);
+
+	}
+
+	.downloadLink {
+		/* font-size: 11px; Reduced from 12px */
+		font-size: clamp(4px,2.5vw,11px);
+
+		margin-top: 2px;
+	}
+	.dropdownSection:last-child {
+		border-bottom: none;
+	}
+}

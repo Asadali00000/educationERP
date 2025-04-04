@@ -31,7 +31,8 @@
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
 .contentContainer h1 {
-	font-size: 30px;
+	font-size: clamp(5px, 5vw, 42px);
+	white-space: nowrap;
 	line-height: 1.2;
 	color: #202124;
 	font-weight: 700;
@@ -41,7 +42,7 @@
 }
 
 .contentContainer p {
-	font-size: 18px;
+	font-size: clamp(4px, 5vw, 18px);
 	line-height: 1.5;
 	color: #5f6368;
 	margin-bottom: 20px;
