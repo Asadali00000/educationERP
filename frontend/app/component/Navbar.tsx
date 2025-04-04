@@ -33,6 +33,8 @@ function Navbar() {
 			<div className={`${styles.navContainer} ${showMobileMenu ? styles.navContainerMobile : ''}`}>
 				<div className={`${styles.productsContainer}`}
 					onMouseEnter={() => setShowDropdown(true)}
+					onMouseLeave={() => setShowDropdown(false)}
+					onClick={()=>setShowDropdown(!showDropdown)}
 					 >
 					<span className='flex'>
 						Products
