@@ -2,12 +2,14 @@
 import React, { useState } from 'react'
 import styles from '../styles/navbar.module.css'
 // Import Font Awesome components
+import { useRouter } from 'next/navigation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWindows, faApple, faLinux, faAndroid, faAppStore } from '@fortawesome/free-brands-svg-icons'
 import { faVideo, faGraduationCap, faCrown, faBars, faTimes  } from '@fortawesome/free-solid-svg-icons'
 import Image from 'next/image'
 
 function Navbar() {
+	const router = useRouter();
 	const [showDropdown, setShowDropdown] = useState(false);
 	const [showMobileMenu, setShowMobileMenu] = useState(false);
 
@@ -135,10 +137,10 @@ function Navbar() {
 				</div>
 				<div className={styles.authContainer}>
 					<div>
-						<button type="button" className={styles.signupButton}>Signup</button>
+						<button type="button" className={styles.signupButton} onClick={() => router.push('/auth/signup')} >Signup</button>
 					</div>
 					<div>
-						<button type="button" className={styles.loginButton}>Login</button>
+						<button type="button" className={styles.loginButton} onClick={() => router.push('/auth/login')} >Login</button>
 					</div>
 				</div>
 			</div>

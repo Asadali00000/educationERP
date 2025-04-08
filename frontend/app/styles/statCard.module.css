@@ -1,0 +1,46 @@
+.statCard {
+	padding: 16px;
+	border-radius: 12px;
+	position: relative;
+	overflow: hidden;
+  }
+
+  .purple {
+	background-color: #f0e7fe;
+	color: #6b21a8;
+  }
+
+  .yellow {
+	background-color: #fef9c3;
+	color: #a16207;
+  }
+
+  .trendBadge {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 12px;
+	background-color: rgba(255, 255, 255, 0.3);
+	padding: 2px 6px;
+	border-radius: 12px;
+  }
+
+  .value {
+	font-size: 28px;
+	font-weight: 700;
+	margin-top: 20px;
+	margin-bottom: 4px;
+  }
+
+  .label {
+	font-size: 14px;
+	font-weight: 500;
+	opacity: 0.9;
+  }
+
+  /* @media (min-width:768px){
+    .statCard{
+		width: 50%;
+	}
+  } */
+

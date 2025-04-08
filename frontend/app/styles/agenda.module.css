@@ -1,0 +1,47 @@
+.agenda {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+  }
+
+  .agendaItem {
+	display: flex;
+	padding: 12px;
+	border-radius: 8px;
+	gap: 12px;
+  }
+
+  .purple {
+	background-color: #f0e7fe;
+  }
+
+  .yellow {
+	background-color: #fef9c3;
+  }
+
+  .blue {
+	background-color: #e0f2fe;
+  }
+
+  .time {
+	font-size: 12px;
+	font-weight: 600;
+	color: #666;
+	min-width: 70px;
+  }
+
+  .details {
+	flex: 1;
+  }
+
+  .subtitle {
+	font-size: 12px;
+	color: #666;
+	margin-bottom: 2px;
+  }
+
+  .title {
+	font-size: 14px;
+	font-weight: 500;
+	color: #333;
+  }
