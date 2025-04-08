@@ -167,7 +167,7 @@ const Login = () => {
       <div className={styles.illustrationSection}>
         <div className={styles.illustrationContent}>
           <Image
-            src="/loginimage.png"
+            src="/loginImage.png"
             alt='Institution login illustration'
             width={400}
             height={400}
