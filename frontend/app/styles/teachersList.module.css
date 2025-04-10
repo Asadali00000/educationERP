@@ -1,0 +1,482 @@
+/* styles/TeacherList.module.css */
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 16px;
+	font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  .header {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	margin-bottom: 16px;
+  }
+
+  .header h1 {
+	font-size: 18px;
+	font-weight: 600;
+	color: #333;
+	margin: 0;
+  }
+
+  .controls {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	width: 100%;
+	flex-wrap: wrap;
+  }
+
+  .searchBox {
+	position: relative;
+	display: flex;
+	align-items: center;
+	flex-grow: 1;
+	min-width: 150px;
+  }
+
+  .searchIcon {
+	position: absolute;
+	left: 10px;
+	color: #fbbf24;
+  }
+
+  .searchBox input {
+	padding: 8px 10px 8px 32px;
+	border: 1px solid #e0e0e0;
+	border-radius: 4px;
+	width: 100%;
+	font-size: 14px;
+	box-sizing: border-box;
+  }
+
+  .searchBox input:focus {
+	outline: none;
+	border-color: #fbbf24;
+  }
+
+  .filterButton,
+  .addButton {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 36px;
+	height: 36px;
+	border: none;
+	border-radius: 50%;
+	background-color: #f3f4f6;
+	cursor: pointer;
+	color: #fbbf24;
+	flex-shrink: 0;
+  }
+
+  .addButton {
+	background-color: #fbbf24;
+	color: white;
+  }
+
+  .filterButton:hover {
+	background-color: #e5e7eb;
+  }
+
+  .addButton:hover {
+	background-color: #f59e0b;
+  }
+
+  .tableContainer {
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+	overflow-x: auto;
+	margin-bottom: 16px;
+	width: 100%;
+	-webkit-overflow-scrolling: touch;
+  }
+
+  .table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 14px;
+	min-width: 600px; /* Minimum width to prevent excessive squishing */
+  }
+
+  .table th {
+	text-align: left;
+	padding: 12px 8px;
+	background-color: #f9fafb;
+	color: #6b7280;
+	font-weight: 500;
+	border-bottom: 1px solid #e5e7eb;
+	white-space: nowrap;
+  }
+
+  .table td {
+	padding: 8px;
+	border-bottom: 1px solid #e5e7eb;
+	color: #374151;
+	height: 52px;
+	vertical-align: middle;
+  }
+
+  .table tr:hover {
+	background-color: #f0e7fe;
+	color: #6b21a8;
+
+  }
+
+
+
+  .checkboxCell {
+	width: 40px;
+	padding-left: 12px !important;
+  }
+
+  .checkboxCell input {
+	cursor: pointer;
+  }
+
+  .nameCell {
+	min-width: 120px;
+  }
+
+
+  .teacherInfo {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+  }
+
+  .avatar {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	background-color: #fef3c7;
+	color: #fbbf24;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 600;
+	flex-shrink: 0;
+	font-size: 14px;
+  }
+
+  .teacherName {
+	font-weight: 500;
+	margin-bottom: 2px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 14px;
+  }
+
+  .teacherEmail {
+	font-size: 12px;
+	color: #6b7280;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+  }
+
+  .addressCell {
+	max-width: 120px;
+	white-space: nowrap;
+	line-height: 1.3;
+	font-size: 13px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+  }
+
+  .subjectCell,
+  .classesCell,
+  .phoneCell,
+  .idCell {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 13px;
+  }
+
+  .actionCell {
+	width: 100px;
+	white-space: nowrap;
+  }
+
+  .actionButton {
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 4px;
+	border-radius: 4px;
+	color: #B0B0B0;
+	margin: 0 2px;
+  }
+
+  .actionButton:hover {
+	background-color: #f3f4f6;
+	color: #f59e0b;
+  }
+
+  .pagination {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 6px;
+	margin-top: 16px;
+	flex-wrap: wrap;
+  }
+
+  .pageButton,
+  .paginationArrow {
+	min-width: 28px;
+	height: 28px;
+	border: 1px solid #e5e7eb;
+	background-color: #fff;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	font-size: 13px;
+	color: #4b5563;
+  }
+
+  .pageButton:hover,
+  .paginationArrow:hover {
+	background-color: #f9fafb;
+  }
+
+  .activePage {
+	background-color: #fef3c7;
+	border-color: #fbbf24;
+	color: #92400e;
+	font-weight: 600;
+  }
+
+  .paginationArrow:disabled {
+	color: #d1d5db;
+	cursor: not-allowed;
+	background-color: #f9fafb;
+  }
+
+  .ellipsis {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 28px;
+	height: 28px;
+	color: #4b5563;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+	.container {
+	  padding: 14px;
+	}
+
+	.table th,
+	.table td {
+	  padding: 10px 6px;
+	  font-size: 13px;
+	}
+
+
+	.avatar {
+	  width: 28px;
+	  height: 28px;
+	  font-size: 13px;
+	}
+
+	.teacherName {
+	  font-size: 13px;
+	}
+
+	.teacherEmail {
+	  font-size: 11px;
+	}
+  }
+
+  @media (max-width: 768px) {
+	.container {
+	  padding: 12px;
+	}
+
+	.header h1 {
+	  font-size: 16px;
+	}
+
+	.searchBox input {
+	  font-size: 13px;
+	}
+
+	.filterButton,
+	.addButton {
+	  width: 32px;
+	  height: 32px;
+	}
+
+	.table th:nth-child(3),
+	.table td:nth-child(3),
+	.table th:nth-child(6),
+	.table td:nth-child(6),
+	.table th:nth-child(7),
+	.table td:nth-child(7) {
+	  display: none;
+	}
+
+	.table {
+	  min-width: 400px;
+	}
+
+	.actionCell {
+	  width: 80px;
+	}
+  }
+
+  @media (max-width: 480px) {
+	.container {
+	  padding: 10px;
+	}
+
+	.header h1 {
+	  font-size: 15px;
+	}
+
+	.controls {
+	  gap: 6px;
+	}
+
+	.searchBox {
+	  min-width: 120px;
+	}
+
+	.searchBox input {
+	  padding-left: 28px;
+	  font-size: 12px;
+	}
+
+	.filterButton,
+	.addButton {
+	  width: 30px;
+	  height: 30px;
+	}
+
+	.table th:nth-child(4),
+	.table td:nth-child(4) {
+	  display: none;
+	}
+
+	.table {
+	  min-width: 320px;
+	}
+
+	.table th,
+	.table td {
+	  padding: 8px 4px;
+	  font-size: 12px;
+	  height: 48px;
+	}
+
+	.checkboxCell {
+	  width: 36px;
+	  padding-left: 8px !important;
+	}
+
+	.avatar {
+	  width: 26px;
+	  height: 26px;
+	  font-size: 12px;
+	}
+
+	.teacherName {
+	  font-size: 12px;
+	}
+
+	.teacherEmail {
+	  font-size: 10px;
+	}
+
+	.pageButton,
+	.paginationArrow {
+	  min-width: 26px;
+	  height: 26px;
+	  font-size: 12px;
+	}
+  }
+
+  @media (max-width: 360px) {
+	.container {
+	  padding: 8px;
+	}
+
+	.header h1 {
+	  font-size: 14px;
+	}
+
+	.searchBox input {
+	  font-size: 11px;
+	}
+
+	.table {
+	  min-width: 300px;
+	}
+
+	.table th,
+	.table td {
+	  font-size: 11px;
+	}
+
+	.teacherName {
+	  font-size: 11px;
+	}
+
+	.teacherEmail {
+	  font-size: 9px;
+	}
+
+	.pageButton,
+	.paginationArrow {
+	  min-width: 24px;
+	  height: 24px;
+	  font-size: 11px;
+	}
+  }
+
+  @media (max-width: 320px) {
+	.searchBox {
+	  min-width: 100px;
+	}
+
+	.table {
+	  min-width: 280px;
+	}
+
+	.table th,
+	.table td {
+	  padding: 6px 3px;
+	  font-size: 10px;
+	  height: 44px;
+	}
+
+	.checkboxCell {
+	  width: 32px;
+	}
+
+	.avatar {
+	  width: 24px;
+	  height: 24px;
+	  font-size: 11px;
+	}
+
+	.teacherName {
+	  font-size: 10px;
+	}
+
+	.teacherEmail {
+	  font-size: 8px;
+	}
+
+	.actionButton {
+	  padding: 2px;
+	}
+  }
