@@ -332,7 +332,7 @@ const StudentForm = () => {
 							<div className={styles.formGrid}>
 								{/* Father Information */}
 								<div className={styles.formGroupFull}>
-									<h3 className={styles.subSectionTitle}>Father's Information</h3>
+									<h3 className={styles.subSectionTitle}>Father&apos;s Information</h3>
 									<div className={styles.parentInfoGrid}>
 										<div className={styles.formGroup}>
 											<label className={styles.formLabel}>
@@ -361,7 +361,7 @@ const StudentForm = () => {
 									</div>
 								</div>
 								<div className={styles.formGroupFull}>
-									<h3 className={styles.subSectionTitle}>Mother's Information</h3>
+									<h3 className={styles.subSectionTitle}>Mother&apos;s Information</h3>
 									<div className={styles.parentInfoGrid}>
 										<div className={styles.formGroup}>
 											<label className={styles.formLabel}>
